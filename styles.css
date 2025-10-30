@@ -1,0 +1,51 @@
+.circle {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: yellow;
+  animation: corners 10s linear infinite;
+}
+
+.circle:hover {
+  opacity: 0;
+}
+
+@keyframes corners {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(calc(100vw - 200px), 0);
+  }
+  50% {
+    transform: translate(calc(100vw - 200px), calc(100vh - 200px));
+  }
+  75% {
+    transform: translate(0, calc(100vh - 200px));
+  }
+}
+
+.loadingbar {
+  display: inline-block;
+  width: 300px;
+  color: #fff;
+  font-size: 20px;
+  border: 2px solid black;
+  background: linear-gradient(to left, white 50%, green 50%);
+  background-size: 200% 100%;
+  background-position: left top;
+  animation: loading 2s infinite;
+}
+
+@keyframes loading {
+  from {
+    background-position: right bottom;
+  }
+  to {
+    background-position: left top;
+  }
+}
